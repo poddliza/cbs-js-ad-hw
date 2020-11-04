@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task 4</title>
+    <!-- Создайте пример демонстрирующий назначение метода toString(). -->
+
+    <script type="text/javascript">
+        function Pet(name, animal) {
+            // свойствa экземпляра
+            this.name = name;
+            this.animal = animal;
+
+            this.getConstructorName = function(){
+                return(this.__proto__.constructor.name);
+            }
+        }
+
+        // переопределение метода toString для Pet
+        Pet.prototype.toString = function() {
+            return 'Object: ' + 'constructor - ' + this.getConstructorName() + ', name - ' + this.name + ', animal - ' + this.animal + '<br>';
+        }
+
+        let pet1 = new Pet('Rich', 'dog');
+        let pet2 = new Pet('Efa', 'cat');
+
+        document.write(pet1.toString());
+        document.write(pet2.toString());
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

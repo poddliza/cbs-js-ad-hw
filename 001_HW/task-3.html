@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 3</title>
+    <!-- Разработайте функцию-конструктор, которая будет создавать объект Human (человек),
+        добавьте на свое усмотрение свойства и методы в этот объект.
+        Подумайте, какие методы и свойства следует сделать уровня экземпляра, а какие уровня функции-конструктора. -->
+
+    <!-- Вместо Human был создан Emploee -->
+
+    <script>
+        function Emploee(name, normalRate, actualWorkingHoursAmount) {
+            // свойствa экземпляра
+            this.name = name;
+            this.normalRate = normalRate;
+            this.actualWorkingHoursAmount = actualWorkingHoursAmount;
+
+            // метод экземпляра (count salary)
+            this.countActualSalary = function () {
+                return (this.normalWorkingHoursAmount*this.normalRate + (this.actualWorkingHoursAmount - this.normalWorkingHoursAmount > 0 ? (this.actualWorkingHoursAmount - this.normalWorkingHoursAmount)*this.overtimeRate(1.5) : ''));
+            }
+        }
+
+        // свойство функции-конструктора
+        Emploee.prototype.normalWorkingHoursAmount = 40; // amount of time emploee should work per week
+
+        // метод функции-конструктора (count salary)
+        Emploee.prototype.overtimeRate = function (overtimeRateRatio) {
+            return this.normalRate*overtimeRateRatio;
+        }
+
+        let emploees = [new Emploee("Vlad", 5, 40), new Emploee("Yely", 10, 50), new Emploee("Alex", 7.5, 20)];
+
+        emploees.forEach(e => {
+            document.write(e.name + ' salary: ' + e.countActualSalary() + '<br>');
+        });
+
+    </script>
+</head>
+<body>
+</body>
+</html>

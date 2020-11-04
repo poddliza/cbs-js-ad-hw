@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1</title>
+    <!-- Создайте функцию конструктор, которая создает объект со
+            свойством экземпляра,
+            свойством функции-конструктора, 
+            методом экземпляра и 
+            методом функции-конструктора.
+        Имена выберите произвольно. -->
+
+    <script>
+        function Pet(name, animal, customIntro) {
+            // свойствa экземпляра
+            this.name = name;
+            this.animal = animal;
+
+            // метод экземпляра
+            this.introduce = function () {
+                document.write((customIntro ? customIntro : 'I am ' + this.introText()) + '<br>');
+            }
+        }
+
+        // свойство функции-конструктора
+        Pet.defaultIntro = 'unknown animal';
+
+        // метод функции-конструктора
+        Pet.prototype.introText = function () {
+            console.log(this.animal === 'cat');
+            return (this.animal === 'cat' ? 'sweet cat' : this.animal === 'dog' ? 'angry dog' : Pet.defaultIntro);
+        }
+
+        let pet1 = new Pet('Rich', 'dog', 'I am the best dog you ever had');
+        let pet2 = new Pet('Efa', 'cat', '');
+        let pet3 = new Pet('Sole', 'turtle', '');
+
+        pet1.introduce();
+        pet2.introduce();
+        pet3.introduce();
+
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 3</title>
+    <script src="CustomQuery.js"></script>
+
+    <script>
+        window.onload = function () {
+            CustomQuery.getElWithClass('red').forEach(el => {
+                            el.style.color = "red";
+                        });
+            CustomQuery.getElWithClass('bold').forEach(el => {
+                            el.style.fontWeight = "bold";
+                        });
+        }
+    </script>
+</head>
+<body>
+
+    <p class="red bold">Voluptatibus nihil doloribus conubia sit dicta. Nostrud nisl accumsan quas.</p>
+    <p>Voluptatibus nihil doloribus conubia sit dicta. Nostrud nisl accumsan quas.</p>
+    <p class="bold">Est eligendi pulvinar hendrerit.</p>
+    <p class="red">Est eligendi pulvinar hendrerit.</p>
+    <p class="red">In facilis, ducimus, cupiditate, est, cursus provident voluptatem? Illo.</p>
+    <p>In facilis, ducimus, cupiditate, est, cursus provident voluptatem? Illo.</p>
+    <p>Eius, mollitia aut aliquam netus, tellus? Condimentum purus facilis.</p>
+    <p class="red">Eius, mollitia aut aliquam netus, tellus? Condimentum purus facilis.</p>
+    <p class="red">Magna gravida iusto omnis illum exercitationem diamlorem integer.</p>
+    <p class="bold">Magna gravida iusto omnis illum exercitationem diamlorem integer.</p>
+
+</body>
+</html>

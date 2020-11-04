@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2</title>
+    <!-- Разработайте функцию-конструктор, которая будет создавать объект Human (человек).
+        Создайте массив объектов и реализуйте функцию, которая будет сортировать элементы массива по значению свойства Age по возрастанию или по убыванию. -->
+
+    <script>
+        function Human(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        // по возростанию
+        let sortAgeAsc = function (ar) {
+            let arCopy = ar.slice();
+            return arCopy.sort(function(a, b){return a.age - b.age});
+        }
+
+        // по убыванию
+        let sortAgeDesc = function (ar) {
+            let arCopy = ar.slice();
+            return arCopy.sort(function(a, b){return b.age - a.age});
+        }
+
+        let people = [new Human('Elena', 55), new Human('Vald', 28), new Human('Timur', 54), new Human('Yely', 29)];
+
+        console.log('initial array: ', people);
+
+        console.log('sortAgeAsc: ', sortAgeAsc(people));
+
+        console.log('sortAgeDesc: ', sortAgeDesc(people));
+    
+
+    </script>
+</head>
+<body>
+    <p>Check result in console</p>
+</body>
+</html>
