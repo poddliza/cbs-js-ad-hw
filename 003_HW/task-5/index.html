@@ -2,13 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Task 5</title>
+    <!-- Создайте бегущую строку.
+        Пользователь вводит текст в поле ввода и нажимает на кнопку.
+        После чего в элементе страниц отображается бегущая строка с введенным текстом. -->
     
-    <script src="scripts.js"></script>
+    <link href="interactiveString.css" rel="stylesheet" type="text/css">
+    <script src="InteractiveString.js"></script>
 
 </head>
 <body>
-
-    
+    <div id="interactive-string-widget">
+        <form id="interactive-string-form">
+            <input id="interactive-string-input" value=""/>
+            <button id="interactive-string-trigger">Start new interactive string</button>
+        </form>
+        <div id="interactive-string-container">
+            <span id="interactive-string"></span>
+        </div>
+    </div>
 
 </body>
 </html>

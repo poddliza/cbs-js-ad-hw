@@ -1,0 +1,22 @@
+﻿#interactive-string-input{
+    border: 2px solid blue;
+}
+
+#interactive-string-container{
+    position: relative;
+    margin: 50px 0;
+    min-height: 50px;
+    border-top: 2px solid green;
+    border-bottom: 2px solid green;
+    overflow: hidden;
+}
+
+#interactive-string{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    font-size: 40px;
+    line-height: 50px;
+    white-space: nowrap;
+    transition: left 300ms linear;
+}
